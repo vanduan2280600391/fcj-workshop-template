@@ -5,55 +5,30 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nghiên cứu và tổng hợp các phương án chuyển dịch cơ sở dữ liệu trên AWS.
+* Hệ thống hóa kiến thức chuyên sâu về hạ tầng mạng, bảo mật và phân phối nội dung trên AWS.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | - Xác định mục tiêu và nhận diện những thách thức khi di chuyển cơ sở dữ liệu: <br>&emsp; + Đảm bảo tương thích schema giữa các engine khác nhau <br>&emsp; + Hạn chế thời gian gián đoạn (downtime) trong lúc migration | 10/05/2026 | 14/05/2026 | [AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) |
+| 3 | - Nghiên cứu bộ công cụ hỗ trợ di chuyển của AWS: <br>&emsp; + DMS, SCT <br>&emsp; + Snow Family, DataSync <br>&emsp; + Các tình huống ứng dụng thực tế | 14/05/2026 | 15/05/2026 | [AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Welcome.html) / [AWS DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/what-is-datasync.html) |
+| 4 | - Quy trình chuyển dịch dữ liệu theo 4 bước: <br>&emsp; + Assessment – đánh giá dữ liệu nguồn và các rủi ro <br>&emsp; + Preparation – chuẩn bị hạ tầng đích <br>&emsp; + Execution – triển khai full load kết hợp CDC <br>&emsp; + Validation & Optimization – kiểm tra và tối ưu kết quả | 15/05/2026 | 16/05/2026 | [AWS DMS Best Practices](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html) |
+| 5 | - Tìm hiểu kiến trúc mạng của Amazon VPC: <br>&emsp; + Subnet, Route Table, Internet/NAT Gateway <br>&emsp; + Security Group và Network ACL <br>&emsp; + PrivateLink, VPN Site-to-Site, Direct Connect | 16/05/2026 | 17/05/2026 | [Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) / [AWS Direct Connect](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html) |
+| 6 | - Hệ thống lại chức năng của Route 53 và CloudFront: <br>&emsp; + Route 53: định tuyến DNS theo Weighted, Latency-based, Failover <br>&emsp; + CloudFront: mạng phân phối nội dung CDN, Edge Location, tích hợp cùng WAF và Shield | 17/05/2026 | 17/05/2026 | [Amazon Route 53](https://docs.aws.amazon.com/route53/latest/developerguide/Welcome.html) / [Amazon CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) |
 
-### Kết quả đạt được tuần 4:
+### Thành tích tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+\- Nhận diện các thách thức thường gặp khi di chuyển cơ sở dữ liệu và biết cách chọn chiến lược xử lý phù hợp: <br>&emsp; \+ Đảm bảo tương thích schema giữa các database engine khác nhau <br>&emsp; \+ Hạn chế thời gian downtime trong suốt quá trình migration <br>&emsp; \+ Giữ vững hiệu năng và tính toàn vẹn dữ liệu sau khi hoàn tất chuyển đổi
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+\- Nắm được cách vận hành của bộ công cụ AWS Migration: <br>&emsp; \+ DMS: khởi tạo replication instance → thiết lập source/target endpoints → chạy migration task (full load + CDC) <br>&emsp; \+ SCT: tự động phân tích và chuyển đổi schema giữa các engine <br>&emsp; \+ Snow Family: Snowcone (quy mô TB), Snowball Edge (quy mô PB), Snowmobile (quy mô Exabyte) <br>&emsp; \+ DataSync: đồng bộ hóa file storage liên tục giữa hệ thống on-premises và AWS
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+\- Thành thạo quy trình di chuyển dữ liệu theo 4 giai đoạn: <br>&emsp; \+ Assessment – đánh giá nguồn dữ liệu và các rủi ro tiềm ẩn <br>&emsp; \+ Preparation – chuẩn bị môi trường đích cùng công cụ cần thiết <br>&emsp; \+ Execution – triển khai full load kết hợp Change Data Capture (CDC) <br>&emsp; \+ Validation & Optimization – kiểm chứng độ chính xác và tối ưu hiệu năng
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+\- Nắm chắc kiến trúc mạng VPC cùng các lớp bảo mật: <br>&emsp; \+ Subnet (Public/Private), Route Table, Internet Gateway, NAT Gateway <br>&emsp; \+ Security Group (có trạng thái) so với Network ACL (không trạng thái) <br>&emsp; \+ Các phương thức kết nối riêng tư: PrivateLink (trong nội bộ AWS), VPN Site-to-Site (qua internet), Direct Connect (đường truyền vật lý riêng)
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+\- Phân biệt được vai trò và ứng dụng thực tế của Route 53 và CloudFront: <br>&emsp; \+ Route 53: định tuyến DNS với các policy như Simple, Weighted, Latency-based, Failover, Geolocation <br>&emsp; \+ CloudFront: lưu cache nội dung tại các Edge Location, kết hợp cùng WAF và Shield để bảo vệ ứng dụng trước tấn công DDoS

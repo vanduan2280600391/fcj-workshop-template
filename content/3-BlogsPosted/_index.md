@@ -6,17 +6,13 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+This section brings together the blog posts I published on [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj) throughout my internship at Amazon Web Services Vietnam.
 
-This section will list and introduce the blogs you have posted to [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). For example:
+### [Blog 1 - Hardening Security with Session Policies in Amazon EKS Pod Identity](3.1-Blog1/)
+This post covers the new Session Policies capability in Amazon EKS Pod Identity, which lets you scope IAM permissions down to the individual Pod level with precision, removing the need to create a separate IAM Role for every pod. It's a meaningful step toward applying the least-privilege principle more effectively in large Kubernetes environments.
 
-###  [Blog 1 - SESSION POLICIES IN AMAZON EKS POD IDENTITY](3.1-Blog1/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+### [Blog 2 - Event-Driven Architecture on AWS: EventBridge, SNS, and SQS in a Serverless System](3.2-Blog2/)
+This post breaks down the event-driven architecture pattern on AWS, where components communicate through events rather than direct REST API calls. It looks at how Amazon EventBridge, Amazon SNS, and Amazon SQS work together to reduce tight coupling, make scaling easier, and support asynchronous processing in serverless systems.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
-
-###  [Blog 3 - ...](3.3-Blog3/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+### [Blog 3 - Building a Data Lake with Amazon S3 and Amazon Athena](3.3-Blog3/)
+This post walks through building a data lake on AWS using Amazon S3 for raw data storage, AWS Glue for metadata management, and Amazon Athena for querying data with SQL without managing any infrastructure. This approach lowers storage costs, scales easily, and lays the groundwork for future data analytics and machine learning applications.

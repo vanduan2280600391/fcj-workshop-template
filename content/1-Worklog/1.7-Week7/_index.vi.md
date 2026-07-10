@@ -5,55 +5,30 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Rà soát và hệ thống hóa lại toàn bộ kiến thức nền tảng đã tích lũy về điện toán đám mây, các dịch vụ lưu trữ, mạng và bảo mật trên AWS.
+* Hoàn tất các bài kiểm tra thực hành đầy đủ và luyện các đề thi thử nhằm chuẩn bị tốt nhất cho kỳ thi cuối khóa.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | - Ôn lại kiến thức căn bản về điện toán đám mây: <br>&emsp; + Các mô hình triển khai: Public, Private, Hybrid Cloud <br>&emsp; + Các mô hình dịch vụ: IaaS, PaaS, SaaS <br>&emsp; + Bảng tổng hợp dịch vụ AWS phân theo từng nhóm chức năng <br> - Thực hiện bài kiểm tra thực hành | 31/05/2026 | 01/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 3 | - Ôn lại kiến thức về EC2 và các giải pháp lưu trữ: <br>&emsp; + Các loại Instance và nhóm dịch vụ Compute <br>&emsp; + S3, EBS, EFS, ElastiCache <br> - Hoàn thành bài kiểm tra chủ đề Compute & Storage | 01/06/2026 | 02/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 4 | - Ôn lại kiến thức mạng và cơ sở dữ liệu: <br>&emsp; + VPC, Subnet, Route Table, Security Group, NACL <br>&emsp; + RDS, Aurora, DynamoDB, ElastiCache <br> - Thực hiện bài kiểm tra thực hành chủ đề Networking & Database | 02/06/2026 | 04/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 5 | - Ôn lại các công cụ vận hành và bảo mật: <br>&emsp; + AWS CLI và Management Console <br>&emsp; + IAM: nguyên tắc least privilege, MFA, bảo vệ tài khoản root <br>&emsp; + Secrets Manager, GuardDuty, Security Hub <br> - Hoàn thành bài kiểm tra tổng hợp | 04/06/2026 | 05/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 6 | - Tổng kết và ôn luyện chuẩn bị cho kỳ thi: <br>&emsp; + Làm đề thi thử toàn diện <br>&emsp; + Xác định các phần còn yếu để tập trung ôn lại <br>&emsp; + Làm quen với dạng câu hỏi và cách phân chia thời gian làm bài | 05/06/2026 | 07/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
-### Kết quả đạt được tuần 7:
+### Thành tích tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+\- Rà soát và củng cố chắc chắn kiến thức nền tảng về điện toán đám mây: <br>&emsp; \+ Ba mô hình triển khai: Public, Private, Hybrid Cloud <br>&emsp; \+ Ba tầng dịch vụ: IaaS, PaaS, SaaS <br>&emsp; \+ Bảng tổng hợp đầy đủ các dịch vụ AWS theo từng nhóm chức năng
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+\- Củng cố vững chắc kiến thức về EC2 và lưu trữ: <br>&emsp; \+ Phân loại các Instance type và lựa chọn phù hợp theo từng loại workload <br>&emsp; \+ Các giải pháp lưu trữ: S3 (object), EBS (block), EFS (file), ElastiCache (in-memory) <br>&emsp; \+ Hoàn thành tốt bài kiểm tra thực hành về Compute và Storage
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+\- Nắm chắc kiến thức về hạ tầng mạng AWS và cơ sở dữ liệu: <br>&emsp; \+ VPC, Subnet, Route Table, Security Group, NACL <br>&emsp; \+ Các dịch vụ kết nối mạng: PrivateLink, VPN, Direct Connect <br>&emsp; \+ Phân biệt rõ RDS, Aurora, DynamoDB, ElastiCache tùy theo nhu cầu sử dụng
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+\- Hoàn thiện kỹ năng thao tác với các công cụ AWS: <br>&emsp; \+ Sử dụng thành thạo AWS CLI và AWS Management Console <br>&emsp; \+ Cấu hình IAM tuân theo nguyên tắc least privilege <br>&emsp; \+ Thiết lập các lớp bảo mật tài khoản: MFA, bảo vệ tài khoản root, Secrets Manager
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+\- Hoàn thành bài thi thử cuối khóa và sẵn sàng bước vào kỳ thi thật: <br>&emsp; \+ Xác định những phần kiến thức còn hạn chế để ôn tập trọng tâm <br>&emsp; \+ Làm quen với cấu trúc đề thi và cách phân bổ thời gian hợp lý

@@ -5,55 +5,30 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Làm chủ kiến trúc Amazon EC2, cơ chế phân phối tải và các chiến lược tự động điều chỉnh quy mô tài nguyên.
+* Nắm bắt các mô hình lưu trữ dữ liệu hiện đại cùng phương án chuyển dịch cơ sở dữ liệu sang AWS.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | - Đi sâu vào kiến trúc EC2: <br>&emsp; + Phân nhóm Instance theo đặc điểm workload <br>&emsp; + Các thành phần liên quan: AMI, VPC, Security Group, EBS <br>&emsp; + Phương thức truy cập: SSH, EC2 Instance Connect, Session Manager | 03/05/2026 | 06/05/2026 | [Tài liệu Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) |
+| 3 | - Tìm hiểu cơ chế cân bằng tải (ELB) và mở rộng tài nguyên tự động (Auto Scaling): <br>&emsp; + Application Load Balancer (ALB) <br>&emsp; + Auto Scaling Group và các Scaling Policy | 06/05/2026 | 08/05/2026 | [Elastic Load Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html) / [Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html) |
+| 4 | - Khám phá giải pháp Container và Serverless trên AWS: <br>&emsp; + Container: ECS, EKS <br>&emsp; + Serverless: AWS Lambda, Fargate | 08/05/2026 | 09/05/2026 | [Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html) / [Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html) / [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) |
+| 5 | - Tìm hiểu các dòng cơ sở dữ liệu trên AWS: <br>&emsp; + SQL: RDS (MySQL, PostgreSQL), Aurora <br>&emsp; + NoSQL: DynamoDB <br>&emsp; + In-memory: MemoryDB | 09/05/2026 | 10/05/2026 | [Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html) / [Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) |
+| 6 | - Nghiên cứu chiến lược di chuyển dữ liệu theo mô hình 6R: <br>&emsp; + Công cụ hỗ trợ: DMS, SCT, Snow Family, DataSync <br>&emsp; + Cách chọn giải pháp phù hợp cho từng tình huống cụ thể | 10/05/2026 | 10/05/2026 | [AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) / [AWS Snow Family](https://aws.amazon.com/snow/) |
 
-### Kết quả đạt được tuần 3:
+### Thành tích tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+\- Phân loại chi tiết kiến trúc EC2 theo từng loại workload và nắm chắc các thành phần cấu hình: <br>&emsp; \+ AMI, VPC, Security Group, EBS <br>&emsp; \+ Các phương thức kết nối từ xa: SSH Key Pair, EC2 Instance Connect, Session Manager
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+\- Hiểu rõ nguyên lý phân phối tải và tự động điều chỉnh quy mô tài nguyên: <br>&emsp; \+ Application Load Balancer (ALB) – định tuyến dựa trên path/host <br>&emsp; \+ Các Scaling Policy: Target Tracking, Step Scaling, Scheduled Scaling <br>&emsp; \+ Phối hợp ELB cùng Auto Scaling Group nhằm đảm bảo khả năng sẵn sàng cao
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+\- Phân biệt rõ ràng các mô hình Container và Serverless trên AWS: <br>&emsp; \+ ECS (chạy trên EC2) so với EKS (nền tảng Kubernetes) <br>&emsp; \+ Fargate – chạy container dạng serverless, không cần quản lý máy chủ <br>&emsp; \+ AWS Lambda – xử lý theo sự kiện, tính phí dựa trên số lần gọi và thời gian thực thi
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+\- Biết cách phân loại và chọn đúng dịch vụ cơ sở dữ liệu tùy theo nhu cầu: <br>&emsp; \+ SQL: RDS (MySQL, PostgreSQL), Aurora (hiệu năng cao) <br>&emsp; \+ NoSQL: DynamoDB (dạng key-value, document, độ trễ thấp) <br>&emsp; \+ In-memory: MemoryDB (tương thích Redis, đảm bảo tính bền vững)
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+\- Nắm được mô hình 6 chiến lược di chuyển dữ liệu (6R) cùng vai trò từng công cụ: <br>&emsp; \+ AWS DMS – di chuyển cơ sở dữ liệu trực tuyến (online migration) <br>&emsp; \+ AWS SCT – tự động chuyển đổi schema giữa các engine khác nhau <br>&emsp; \+ Snow Family – di chuyển dữ liệu offline ở quy mô lớn (từ TB đến PB) <br>&emsp; \+ DataSync – đồng bộ hóa file storage một cách liên tục và tự động

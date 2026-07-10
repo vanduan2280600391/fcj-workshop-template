@@ -5,53 +5,30 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Research and consolidate database migration approaches on AWS.
+* Build a systematic understanding of AWS networking infrastructure, security, and content delivery services.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Define objectives and identify challenges in database migration: <br>&emsp; + Ensuring schema compatibility across different engines <br>&emsp; + Minimizing downtime during the migration process | 05/10/2026 | 05/14/2026 | [AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) |
+| Tue | - Study the AWS migration toolset: <br>&emsp; + DMS, SCT <br>&emsp; + Snow Family, DataSync <br>&emsp; + Real-world application scenarios | 05/14/2026 | 05/15/2026 | [AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Welcome.html) / [AWS DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/what-is-datasync.html) |
+| Wed | - The four-stage data migration process: <br>&emsp; + Assessment – evaluating source data and risks <br>&emsp; + Preparation – setting up the target environment <br>&emsp; + Execution – performing full load plus CDC <br>&emsp; + Validation & Optimization – verifying results and optimizing | 05/15/2026 | 05/16/2026 | [AWS DMS Best Practices](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html) |
+| Thu | - Study the Amazon VPC network architecture: <br>&emsp; + Subnet, Route Table, Internet/NAT Gateway <br>&emsp; + Security Group and Network ACL <br>&emsp; + PrivateLink, Site-to-Site VPN, Direct Connect | 05/16/2026 | 05/17/2026 | [Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) / [AWS Direct Connect](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html) |
+| Fri | - Consolidate knowledge of Route 53 and CloudFront: <br>&emsp; + Route 53: DNS routing with Weighted, Latency-based, Failover policies <br>&emsp; + CloudFront: CDN, Edge Locations, integrated with WAF and Shield | 05/17/2026 | 05/17/2026 | [Amazon Route 53](https://docs.aws.amazon.com/route53/latest/developerguide/Welcome.html) / [Amazon CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) |
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+\- Identified common challenges in database migration and learned to choose the right strategy to address them: <br>&emsp; \+ Ensuring schema compatibility across different database engines <br>&emsp; \+ Minimizing downtime throughout the migration process <br>&emsp; \+ Preserving performance and data integrity after the migration completes
 
-* Successfully created and configured an AWS Free Tier account.
+\- Understood how the AWS Migration toolset operates: <br>&emsp; \+ DMS: creating a replication instance → configuring source/target endpoints → running migration tasks (full load + CDC) <br>&emsp; \+ SCT: automatically analyzing and converting schemas between different engines <br>&emsp; \+ Snow Family: Snowcone (TB scale), Snowball Edge (PB scale), Snowmobile (Exabyte scale) <br>&emsp; \+ DataSync: continuously synchronizing file storage between on-premises systems and AWS
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+\- Became proficient in the four-stage data migration process: <br>&emsp; \+ Assessment – evaluating the source data and potential risks <br>&emsp; \+ Preparation – setting up the target environment and required tools <br>&emsp; \+ Execution – performing full load combined with Change Data Capture (CDC) <br>&emsp; \+ Validation & Optimization – verifying correctness and optimizing performance
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+\- Gained a solid understanding of the VPC network architecture and its security layers: <br>&emsp; \+ Subnet (Public/Private), Route Table, Internet Gateway, NAT Gateway <br>&emsp; \+ Security Group (stateful) versus Network ACL (stateless) <br>&emsp; \+ Private connectivity methods: PrivateLink (within AWS), Site-to-Site VPN (over the internet), Direct Connect (dedicated physical link)
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+\- Distinguished the roles and real-world use cases of Route 53 and CloudFront: <br>&emsp; \+ Route 53: DNS routing with policies such as Simple, Weighted, Latency-based, Failover, Geolocation <br>&emsp; \+ CloudFront: caching content at Edge Locations, integrated with WAF and Shield to protect applications from DDoS attacks

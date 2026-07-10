@@ -5,27 +5,29 @@ weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# Event-Driven Architecture on AWS: EventBridge, SNS, and SQS in a Serverless System
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+Event-Driven Architecture is a system design approach where components communicate through events rather than calling one another directly via REST APIs. On AWS, this pattern can be implemented effectively by combining Amazon API Gateway, AWS Lambda, Amazon EventBridge, Amazon SNS, and Amazon SQS — reducing dependencies between services, improving scalability, and keeping the system stable while handling asynchronous workloads.
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+![Event-Driven Architecture on AWS](/images/blogs/blog2.jpeg)
 
-Key points to know:
+## Key Takeaways
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+* The producer only emits events: once business logic finishes running, AWS Lambda sends an event to Amazon EventBridge instead of calling another service directly, reducing coupling between components.
+* Amazon EventBridge handles event routing: it receives, filters, and forwards events based on configured rules, and can also relay events across multiple AWS accounts.
+* Amazon SNS implements a publish/subscribe pattern: a single event can be broadcast simultaneously to multiple subscribers — AWS Lambda, Amazon SQS, an HTTP endpoint, or email — without the producer needing any changes.
+* Amazon SQS handles asynchronous processing: acting as a queue, SQS buffers events temporarily, absorbs sudden traffic spikes, and supports retries and a Dead Letter Queue (DLQ) to prevent data loss when a consumer fails.
+* The architecture scales easily: adding new capabilities — sending emails, audit logging, feeding a data lake, or machine learning — only requires registering a new consumer, without touching existing components.
+* Cost-efficient and scalable: relying on serverless services like API Gateway, Lambda, EventBridge, SNS, and SQS lets the system automatically scale with actual traffic and only incur costs when requests are being processed.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+This architecture is particularly well suited to microservices systems, asynchronous processing, multi-system integrations, or multi-account AWS environments — anywhere that calls for high scalability, loose coupling between services, and stronger fault tolerance across the whole system.
 
-...Image...
+[View the post on AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2203146967116930/?rdid=HY6kGYPyWz6qbEgn&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F19BpYphs7p%2F)
 
-...Link...
+---
 
-...Guide...
+## References
+
+* [Amazon EventBridge – AWS Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
+* [Amazon SNS – AWS Documentation](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)
+* [Amazon SQS – AWS Documentation](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html)

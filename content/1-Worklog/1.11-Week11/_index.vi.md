@@ -5,55 +5,33 @@ weight: 2
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Xây dựng bộ API nền tảng cho hệ thống FlashLearn.
+* Thiết lập cơ sở dữ liệu và dựng giao diện quản trị nội dung.
+* Xây dựng cơ chế phê duyệt nội dung tự động.
+* Cải thiện cách quản lý tài nguyên lưu trữ bằng S3 Presigned URL.
+* Hoàn chỉnh tài liệu kỹ thuật cùng sơ đồ quan hệ thực thể (ERD).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | - Xây dựng API RESTful phục vụ Flashcard và Quiz: <br>&emsp; + POST /flashcards (Create), GET, PUT, DELETE <br>&emsp; + Kiểm tra tính hợp lệ của dữ liệu đầu vào (giới hạn ký tự, định dạng câu hỏi) <br>&emsp; + Tích hợp xác thực JWT thông qua API Gateway Authorizer | 28/06/2026 | 29/06/2026 | [Xây dựng API RESTful với API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started.html) |
+| 3 | - Thiết lập cơ sở dữ liệu và giao diện quản trị: <br>&emsp; + Tạo bảng flashcards có cột status (pending/approved/rejected) <br>&emsp; + Tạo bảng quiz_results <br>&emsp; + Xây dựng giao diện admin để quản lý nội dung (xem, duyệt, từ chối) | 29/06/2026 | 30/06/2026 | |
+| 4 | - Xây dựng cơ chế phê duyệt nội dung tự động: <br>&emsp; + Khi admin phê duyệt → Lambda tự động cập nhật chỉ mục tìm kiếm <br>&emsp; + EventBridge gửi thông báo tới người tạo nội dung | 01/07/2026 | 02/07/2026 | |
+| 5 | - Tạo Presigned URL của S3 phục vụ upload/download: <br>&emsp; + Presigned URL có thời hạn để tải trực tiếp lên S3 <br>&emsp; + CloudFront phân phối ảnh/âm thanh thông qua URL đã ký <br>&emsp; + Giảm tải cho băng thông server | 02/07/2026 | 03/07/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 6 | - Hoàn thiện tài liệu kỹ thuật cùng sơ đồ ERD: <br>&emsp; + ERD đầy đủ: Users, Flashcards, Decks, Quiz, QuizResults, Battle, Progress, AuditLogs <br>&emsp; + Tài liệu mô tả API gồm endpoint, request/response schema và mã lỗi | 03/07/2026 | 05/07/2026 | [Hướng dẫn thiết kế sơ đồ quan hệ thực thể](https://lucid.co/diagram/erd/tutorial) |
 
-### Kết quả đạt được tuần 11:
+### Thành tích tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+\- Xây dựng và hoàn chỉnh bộ API RESTful nền tảng cho hệ thống FlashLearn: <br>&emsp; \+ API Flashcard: POST /flashcards (Create), GET /flashcards/{id}, PUT, DELETE cùng cơ chế xác thực dữ liệu đầu vào <br>&emsp; \+ API Quiz: quy định cấu trúc câu hỏi, định dạng đáp án và giới hạn số ký tự <br>&emsp; \+ Tích hợp xác thực JWT token thông qua API Gateway Authorizer
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+\- Thiết lập thành công cơ sở dữ liệu và giao diện quản trị nội dung: <br>&emsp; \+ Tạo bảng flashcards với cột status (pending/approved/rejected) cùng bảng quiz_results <br>&emsp; \+ Giao diện admin hỗ trợ xem, duyệt, từ chối và chỉnh sửa nội dung flashcard <br>&emsp; \+ Phân quyền cho admin thông qua một IAM Role riêng
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+\- Xây dựng cơ chế phê duyệt nội dung tự động: <br>&emsp; \+ Khi admin phê duyệt nội dung → Lambda được kích hoạt tự động để cập nhật chỉ mục tìm kiếm <br>&emsp; \+ Gửi thông báo qua EventBridge đến người tạo nội dung mỗi khi trạng thái thay đổi <br>&emsp; \+ Ghi lại toàn bộ lịch sử phê duyệt vào bảng audit_logs
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+\- Cải thiện cách quản lý tài nguyên lưu trữ bằng S3 Presigned URL: <br>&emsp; \+ Tạo Presigned URL có thời hạn để người dùng có thể tải file trực tiếp lên S3 mà không cần qua server <br>&emsp; \+ CloudFront phân phối ảnh/âm thanh từ S3 thông qua URL đã ký, ngăn chặn truy cập trái phép vào tài nguyên <br>&emsp; \+ Giảm tải cho băng thông server, giúp tốc độ upload được cải thiện
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+\- Hoàn chỉnh tài liệu kỹ thuật cùng ERD của hệ thống: <br>&emsp; \+ ERD đầy đủ bao gồm các thực thể: Users, Flashcards, Decks, Quiz, QuizResults, Battle, Progress, AuditLogs <br>&emsp; \+ Xác định rõ các quan hệ 1-N và N-N, cùng khóa chính, khóa ngoại cho từng bảng <br>&emsp; \+ Tài liệu API mô tả chi tiết endpoint, cấu trúc request/response và các mã lỗi

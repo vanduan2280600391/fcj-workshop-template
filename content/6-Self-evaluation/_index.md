@@ -6,12 +6,8 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+During my internship at Amazon Web Services Vietnam Company Limited from April 17, 2026 to July 10, 2026, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
+I took part in the Workforce Bootcamp - First Cloud AI Journey program, moving from learning AWS cloud fundamentals to directly building a real-world project, FlashLearn - an English-learning application featuring flashcards, quizzes, battle mode, and a learning community, through which I improved my skills in AWS system architecture design, backend development with NodeJS, API and database design, as well as reporting and workplace communication.  
 
 In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
 

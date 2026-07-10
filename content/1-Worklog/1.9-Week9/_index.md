@@ -5,53 +5,31 @@ weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Begin building FlashLearn – a web application that helps users learn English through flashcards, quizzes, battle mode, and a learning community.
+* Set up a modern system architecture on AWS (Singapore region) with a VPC spanning two Availability Zones to ensure high availability.
+* Optimize application performance by combining a serverless model with managed services such as Amazon CloudFront, Lambda, and EventBridge.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Kickoff meeting for the FlashLearn project: <br>&emsp; + Finalizing the PostgreSQL database schema design <br>&emsp; + Collecting and standardizing an English vocabulary dataset | 06/14/2026 | 06/15/2026 | |
+| Tue | - Build a multi-AZ VPC network architecture: <br>&emsp; + A VPC with 2 public subnets and 2 private subnets <br>&emsp; + Configuring an IAM Role for EC2 following least privilege <br>&emsp; + Setting up layered Security Groups | 06/15/2026 | 06/16/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| Wed | - Configure the ALB and static content delivery: <br>&emsp; + ALB routing traffic based on health checks <br>&emsp; + Uploading static assets to S3 <br>&emsp; + Integrating CloudFront CDN | 06/16/2026 | 06/18/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| Thu | - Team meeting: review UI/UX designs in Figma: <br>&emsp; + Reviewing the flashcard, quiz, and battle screens <br>&emsp; + Refining the user experience flow | 06/18/2026 | 06/19/2026 | |
+| Fri | - Build the notification and text-to-speech system: <br>&emsp; + An EventBridge rule triggering Lambda to send study reminders <br>&emsp; + Integrating Amazon Polly to convert text to speech | 06/19/2026 | 06/21/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+\- Finalized the PostgreSQL database schema design for the FlashLearn system: <br>&emsp; \+ Defined the core tables: Users, Flashcards, Decks, Quiz, Battle, Progress <br>&emsp; \+ Set up foreign key relationships and indexes to optimize query performance <br>&emsp; \+ Collected and standardized the English vocabulary dataset
 
-* Successfully created and configured an AWS Free Tier account.
+\- Successfully built a highly available, multi-AZ VPC network architecture on AWS Singapore: <br>&emsp; \+ A VPC with 2 public subnets and 2 private subnets spread across 2 Availability Zones <br>&emsp; \+ Configured an IAM Role for EC2 following the least-privilege principle <br>&emsp; \+ Set up layered Security Groups for each application tier
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+\- Configured the Application Load Balancer and deployed static content delivery: <br>&emsp; \+ ALB routing traffic to EC2 instances based on health checks <br>&emsp; \+ Created and configured an S3 bucket to store static assets <br>&emsp; \+ Integrated CloudFront CDN to deliver content with low latency worldwide
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+\- Improved the user experience through a team review session in Figma: <br>&emsp; \+ Reviewed and refined the UI/UX of the flashcard, quiz, and battle screens <br>&emsp; \+ Adjusted the user flow based on team feedback
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+\- Successfully built an automated notification system and a text-to-speech feature: <br>&emsp; \+ An EventBridge rule triggering Lambda on a schedule to send study reminders <br>&emsp; \+ Integrated Amazon Polly to convert vocabulary text into speech <br>&emsp; \+ Lambda processes the events and stores the results in S3

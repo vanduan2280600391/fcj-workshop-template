@@ -6,11 +6,9 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+Here I would like to share my personal opinions about my experience participating in the First Cloud AI Journey program, in the hope that it can help the FCAJ team improve on the following aspects:
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+---
 
 ### Overall Evaluation
 
@@ -35,13 +33,19 @@ The company provides an internship allowance and offers flexible working hours w
 ---
 
 ### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+
+What I found most satisfying during my internship was getting to build a complete product (FlashLearn) from start to finish on AWS, while always having a mentor ready to support me whenever I ran into difficulties.
+
+What I think the company could improve for future interns is organizing more social gatherings and team-building activities among interns, giving everyone a chance to connect beyond the day-to-day work sessions.
+
+If recommending this to a friend, I would suggest they intern here, because of the friendly environment, the chance to learn real-world AWS skills, and the opportunity to contribute to an actual project from the early stages onward.
 
 ---
 
 ### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+
+I would suggest organizing more knowledge-sharing sessions between past and future intern cohorts, so that learning from one another spreads further throughout the program.
+
+I would like to continue working with this program and the team in the future if the right opportunity comes up.
+
+Other comments: Thank you to the FCAJ team for providing such great support throughout my internship — I hope the program keeps growing and continues to support even more young people going forward.
