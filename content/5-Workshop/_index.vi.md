@@ -13,7 +13,7 @@ Trong workshop này, bạn sẽ học cách triển khai ứng dụng **ASP.NET 
 
 ---
 
-## Những gì bạn sẽ xây dựng
+## [Những gì bạn sẽ xây dựng](http://flash-learn.ap-southeast-1.elasticbeanstalk.com/)
 
 ```
 [Người dùng]

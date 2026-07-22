@@ -13,7 +13,7 @@ In this workshop, you will learn how to deploy an **ASP.NET Core 8.0** applicati
 
 ---
 
-## What You Will Build
+## [What You Will Build](http://flash-learn.ap-southeast-1.elasticbeanstalk.com/)
 
 ```
 [Users]
