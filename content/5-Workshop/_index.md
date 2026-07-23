@@ -15,7 +15,7 @@ In this workshop, you will learn how to deploy an **ASP.NET Core 8.0** applicati
 
 ## What You Will Build
 
-👉 [View the live FlashLearn demo](http://flash-learn.ap-southeast-1.elasticbeanstalk.com/)
+👉 [View the live FlashLearn demo](https://d2rk4q7n3y3z05.cloudfront.net/Account/Register)
 
 ```
 [Users]
